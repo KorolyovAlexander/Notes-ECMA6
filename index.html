@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="MainController.js"></script>
+    <script src="NoteDirective.js"></script>
+</head>
+<body ng-controller="MainController as vm">
+    <input ng-model="vm.text" placeholder="input text" />
+    <button ng-click="vm.addNote(vm.text)">add</button>
+    <br />
+    <br />
+    <div ng-repeat="note in vm.notes track by $index">
+        <note value="note" delete="vm.deleteNote($index)"></note>
+    </div>
+</body>
+</html>

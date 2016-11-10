@@ -1,0 +1,11 @@
+.submit{
+    display: none;
+}
+
+.note{
+    margin: 20px 10px;
+}
+
+.note:hover button{
+    display: inline-block;
+}
